@@ -183,7 +183,7 @@ else:
             staff_name = st.text_input('Staff Name', value=st.session_state['staff_name'])
             staff_number = st.text_input('Staff Number', value=st.session_state['staff_number'])
             mobile_phone = st.text_input('Mobile Phone', value=st.session_state['mobile_phone'])
-            shift_timing = st.selectbox('Shift Timing', ['6-2', '8-5', '10-6', '2-10', '5-9(DAY/NIGHT)', '10-6(NIGHT)'])
+            shift_timing = st.selectbox('Shift Timing', ['6-2', '8-5', '10-6', '2-10','5-1', '5-9(DAY/NIGHT)', '10-6(NIGHT)'])
             submitted = st.form_submit_button('Submit')
 
             if submitted:
