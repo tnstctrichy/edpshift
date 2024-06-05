@@ -156,7 +156,7 @@ if st.session_state['username'] is None:
                 st.session_state['username'] = user['username']
                 st.session_state['role'] = user['role']
                 st.success(f'Welcome, {user["username"]}!')
-                st.experimental_rerun()  # Reload the page to reflect the login status
+                st.rerun()  # Reload the page to reflect the login status
             else:
                 st.error('Invalid username or password.')
 else:
@@ -164,7 +164,7 @@ else:
     if st.sidebar.button('Logout'):
         st.session_state['username'] = None
         st.session_state['role'] = None
-        st.experimental_rerun()
+        st.rerun()
 
     # Employee form for shift submission
     if st.session_state['role'] == 'user':
